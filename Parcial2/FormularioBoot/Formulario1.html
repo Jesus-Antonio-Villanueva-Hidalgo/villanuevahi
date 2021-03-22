@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="Grid1.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+
+            <div class="row">
+                <div class="form-group col-sm-6 col-md-5 text-left">
+                    <label for="folioVacuna" class="control-label">Folio mivacuna (opcional):</label>
+                    <input id="folioVacuna" class="form-control" type="text" placeholder="1A378SNM">
+                </div>
+                <div class="form-group col-sm-6 col-md-7 text-left">
+                    <label for="folioCaptura" class="control-label">Folio captura (opcional):</label>
+                    <input id="folioCaptura" class="form-control" type="text" placeholder="AV1803GZ">
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="cabezera" class="form-group col-sm-12 col2">
+                    <h2>EXPEDIENTE DE VACUNACIÓN CONTRA EL VIRUS SARS-COV2</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-sm-6 col-md-5 col-lg-3 text-left">
+                    <label for="fechaVacuna" class="control-label">Fecha de vacunación</label>
+                    <input id="fechaVacuna" class="form-control" type="date">
+                </div>
+                <div class="form-group col-sm-6 col-md-7 col-lg-3 text-left">
+                    <label for="marcaVacuna" class="control-label">Marca de vacuna</label>
+                    <input id="marcaVacuna" class="form-control" type="text">
+                </div>
+                <div class="form-group col-sm-6 col-md-5 col-lg-3 text-left">
+                    <label for="lote" class="control-label">Lote</label>
+                    <input id="lote" class="form-control" type="text" placeholder="AV1803GZ">
+                </div>
+                <div class="col-sm-6 col-md-7 col-lg-3 text-left">
+                    <label class="control-label">Dosis:</label><br>
+                    <input type="radio" id="rad-primera" name="dosis" checked>
+                    <label for="rad-primera">Primera&ThinSpace;</label>
+                    <input type="radio" id="rad-segunda"  name="dosis">
+                    <label for="rad-segunda" >Segunda</label>
+                </div>
+            </div>
+
+            <div class="row" >
+                <div class="form-group col-sm-6 col-md-6 col-lg-3 text-left">
+                    <label for="nombre" class="control-label"></label>
+                    <input id="nombre" class="form-control prueba" type="text" placeholder="Nombre(s)">
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-3 text-left">
+                    <label for="apellido1" class="control-label"></label>
+                    <input id="apellido1" class="form-control prueba" type="text" placeholder="Apellido1">
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-2 text-left">
+                    <label for="apellido2" class="control-label"></label>
+                    <input id="apellido2" class="form-control prueba" type="text" placeholder="Apellido2">
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-2 text-left">
+                    <label class="control-label">Sexo:</label><br>
+                    <input type="radio" id="rad-H" name="sexo" checked>
+                    <label for="rad-H">H&ThinSpace;</label>
+                    <input type="radio" id="rad-M"  name="sexo">
+                    <label for="rad-M" >M</label>
+                </div>
+                <div class="form-group col-sm-6 col-md-3 col-lg-2 text-left">
+                    <label for="apellido2" class="control-label">Edad</label>
+                    <input id="apellido2" class="form-control prueba" type="text" placeholder="90 años">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-sm-6 col-md-6 col-lg-8 text-left">
+                    <label for="curp" class="control-label">CURP (Clave única de registro de población)</label>
+                    <input id="curp" class="form-control" type="text">
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-4 text-left">
+                    <label for="telefono1" class="control-label">Teléfono o celular1</label>
+                    <input id="telefono1" class="form-control" type="text">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-sm-6 col-md-6 col-lg-8 text-left">
+                    <label for="correo" class="control-label">Correo Electrónico</label>
+                    <input id="correo" class="form-control" type="text">
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-4 text-left">
+                    <label for="telefono2" class="control-label">Teléfono o celular2</label>
+                    <input id="telefono2" class="form-control" type="text">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-sm-6 col-md-6 col-lg-2 text-left">
+                    <label for="calle" class="control-label">Calle     </label>
+                    <input id="calle" class="form-control" type="text">
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-1 text-left">
+                    <label for="numExterior" class="control-label">N. Exterior</label>
+                    <input id="numExterior" class="form-control" type="text">
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-1 text-left">
+                    <label for="numInterior" class="control-label">N. Interior</label>
+                    <input id="numInterior" class="form-control" type="text">
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-3 text-left">
+                    <label for="colonia" class="control-label">Colonia</label><br>
+                    <input id="colonia" class="form-control" type="text">
+                </div>
+                <div class="form-group col-sm-6 col-md-3 col-lg-1 text-left">
+                    <label for="cp" class="control-label">C.P.</label><br>
+                    <input id="cp" class="form-control" type="text">
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-2 text-left">
+                    <label for="municipio" class="control-label">Municipio</label><br>
+                    <input id="municipio" class="form-control" type="text">
+                </div>
+                <div class="form-group col-sm-6 col-md-3 col-lg-2 text-left">
+                    <label for="estado">Estado</label>
+                    <select name="location" id="estado" >
+                        <option value="Tamaulipas">Tamaulipas</option>
+                        <option value="Michoacan">Michoacán</option>
+                        <option value="Jalisco">Jalisco</option>
+                        <option value="Puebla">Puebla</option>
+                        <option value="Aguascalientes">Aguascalientes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="cabezera2" class="form-group col-sm-12 col-md-6 col-lg-3 col2">
+                    <h3>PADECIMIENTOS</h3>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-3 text-left">
+                    <label class="control-label">Diabetes</label><br>
+                    <input type="radio" id="rad-diabetes-si" name="diabetes" checked>
+                    <label for="rad-primera">Si&ThinSpace;</label>
+                    <input type="radio" id="rad-diabetes-no"  name="diabetes">
+                    <label for="rad-segunda" >No</label>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-3 text-left">
+                    <label class="control-label">Hipertensión</label><br>
+                    <input type="radio" id="rad-hipertension-si" name="hipertension" checked>
+                    <label for="rad-primera">Si&ThinSpace;</label>
+                    <input type="radio" id="rad-hipertension-no"  name="hipertension">
+                    <label for="rad-segunda" >No</label>
+                </div>
+                <div class="form-group col-sm-4 col-md-6 col-lg-3 text-left">
+                    <label for="colonia" class="control-label">Otra (opcional)</label>
+                    <input id="colonia" class="form-control" type="text">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-sm-12 col-md-12 col-lg-12 text-left">
+                    <input type="submit" value="Enviar">
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

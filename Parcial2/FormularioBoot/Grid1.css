@@ -1,0 +1,52 @@
+.container{
+    background: honeydew;
+}
+.col1{
+    background: goldenrod;
+}
+div>label{
+    font-size: 18px;
+    font-family: Arial;
+    font-weight: bold;
+}
+.col2{
+    background: rgb(16, 134, 16);
+}
+#cabezera>h2{
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+#cabezera2>h3{
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    padding-top: 15px;
+}
+input[type=text]:focus {
+    background-color: lightblue;
+}
+input.prueba[type=text] {
+    border: none;
+    border-bottom: 2px solid black;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+select {
+    padding: 14px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
