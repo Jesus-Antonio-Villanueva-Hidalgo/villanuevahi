@@ -49,4 +49,12 @@ select {
     border: none;
     border-radius: 4px;
     background-color: #f1f1f1;
-  }
+}
+#imagen{
+    border: black solid 1px;
+    height: 100%;
+    width: 100%;
+}
+#estado{
+    width: 100%;
+}
