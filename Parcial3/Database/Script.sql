@@ -12,4 +12,4 @@ contraseña varchar (30) not null,
 constraint PK_USUARIO primary key (id_usuario)
 );
 
-INSERT INTO usuario VALUES ('Jesus Antonio','Villanueva','Hidalgo','jesus@gmail.com','Blitz');
+INSERT INTO usuario VALUES (null,'Jesus Antonio','Villanueva','Hidalgo','jesus@gmail.com','Blitz');
