@@ -34,40 +34,71 @@
 
 ?>
 
-
-    <div class="container p-4">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/editar.css">
+    <title>EDITAR</title>
+</head>
+<body>
+<div class="container p-4">
         <div class="row">
-            <div class="col-md-4 mx-auto">
+            <div class="col-md-6 mx-auto">
                 <div class="card card-body">
-                    <form action="editar.php?id_usuario=<?php echo $_GET['id_usuario']; ?> " method="POST">
+                    <form action="editar.php?id_usuario=<?php echo $_GET['id_usuario']; ?> " method="POST" id="edit">
+                        <div class="edit-form">
+                            <div class="form-group">
+                                <span>ID</span>
+                                <input type="text" name="id" readonly value="<?php echo $id_usuario ?>"
+                                class="form-control" placeholder="ID">
+                            </div>
+                            <div class="form-group">
+                                <span>Nombre</span>
+                                <input type="text" name="nombre" value="<?php echo $nombre ?>"
+                                class="form-control" placeholder="Nombre" required>
+                            </div>
                         <div class="form-group">
-                            <input type="text" name="id" value="<?php echo $id_usuario ?>"
-                            class="form-control" placeholder="ID">
-                        </div>
-                        <div class="form-group">
-                        <input type="text" name="nombre" value="<?php echo $nombre ?>"
-                            class="form-control" placeholder="Nombre">
-                        </div>
-                        <div class="form-group">
+                        <span>Apellido Paterno</span>
                         <input type="text" name="ApePaterno" value="<?php echo $paterno ?>"
-                            class="form-control" placeholder="Apellido Paterno">
+                            class="form-control" placeholder="Apellido Paterno" required>
                         </div>
                         <div class="form-group">
+                        <span>Apellido Materno</span>
                         <input type="text" name="ApeMaterno" value="<?php echo $materno ?>"
                             class="form-control" placeholder="Apellido Materno">
                         </div>
                         <div class="form-group">
+                        <span>Usuario</span>
                         <input type="text" name="usuario" value="<?php echo $usuario ?>"
-                            class="form-control" placeholder="Usuario">
+                            class="form-control" placeholder="Usuario" required>
                         </div>
                         <div class="form-group">
+                        <span>Nueva Contraseña</span>
                         <input type="text" name="nueva_contraseña" value=""
-                            class="form-control" placeholder="Nueva Contraseña">
+                            class="form-control" placeholder="Nueva Contraseña" required>
                         </div>
-                        <a href="index.php">Volver</a>
-                        <button class="btn btn-sucess" name="actualizar">Actualizar</button>
+                        <a href="index.php" >Volver</a>
+                        <button class="btn btn-sucess" name="actualizar" id="btn-update" data-target=".bd-example-modal-lg">Actualizar</button>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+    

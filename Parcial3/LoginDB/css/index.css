@@ -1,5 +1,22 @@
 .cabezera{
-    border: 2px coral;
+    background-color: #b271dd;
+    margin-bottom: 50px;
+}
+.cab1{
+    position: relative;
+    width: 600px;
+    left: 50px;
+    top: 30px;
+}
+.cab2{
+    position: relative;
+    left: 1200px;
+    width: 250px;
+    bottom: 40px;
+    font-size: 30px;
+}
+div a{
+    color: black;
 }
 h2{
     text-align: center;
@@ -17,7 +34,7 @@ table.list-table {
     min-width: 400px;
 }
 .list-table thead tr{
-    background-color: coral;
+    background-color:#b271dd;
     color: black;
     text-align: center;
     font-weight: bold;
@@ -29,4 +46,44 @@ table.list-table {
 }
 .list-table tbody tr:nth-of-type(even){
     background-color: #f3f3f3;
+}
+.lista-usuarios{
+    margin-bottom: 50px;
+}
+.ingresar .ingresar-usuario{
+    position: relative;
+    width: 600px;
+    left: 32%;
+    margin-bottom: 30px;
+}
+.ingresar .form .ingresar-usuario .input{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.input-field{
+    width: 400px;
+    height: 30px;
+    margin-top: 20px;
+    position: absolute;
+    left: 150px;
+}
+span{
+    font-style: oblique;
+    font-family: Arial;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 150x;
+    
+}
+.button{
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-right: 100px;
+    height: 40px;
+    background-color: rgb(185, 111, 255);
+    color: white;
+    font-family: arial;
+    font-weight: bold;
 }

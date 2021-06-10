@@ -26,7 +26,7 @@
         ?>
         <?php
             /*include ("login.php");*/
-            header("location: login.php");
+            header("location: login.html");
         ?>
         <h1 class="bad">NO SE ENCONTRÓ  AL USUARIO</h1>
         <?php

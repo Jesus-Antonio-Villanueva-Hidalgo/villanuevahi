@@ -24,16 +24,18 @@
         $sql="select * from usuario";
         $resultado=mysqli_query($conexion,$sql);
     ?>
+
+
     <div class="cabezera">
-        <div>
+        <div class="cab1">
             <h1>Bienvenid@: <?php echo $usuario ?></h1><br>
         </div>
-        <div>
-            <a href="logout.php">Cerrar Sesion</a>
+        <div class="cab2">
+            <a href="logout.php">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a>
         </div>
     </div>
     
-    <div class="col-md-12">
+    <div class="col-md-12 lista-usuarios">
     <h1 id="list">Lista de Usuarios</h1>
     <table class="list-table table-bordered">
         <thead>
@@ -73,34 +75,40 @@
 
 <div class="ingresar">
     <h2>Ingresar Usuario</h2>
-        <form action="insertar.php" method="post">
-            <table>
-                <tr>
-                    <td>Nombre: </td>
-                    <td><input type="text" name="txtNombre" required></td>
-                
-                </tr>
-                <tr>
-                    <td>Apellido Paterno: </td>
-                    <td><input type="text" name="txtPaterno" required></td>
-                </tr>
-                <tr>
-                    <td>Apellido Materno: </td>
-                    <td><input type="text" name="txtMaterno" required></td>
-                </tr>
-                <tr>
-                    <td>Usuario: </td>
-                    <td><input type="text" name="txtUsuario" required></td>
-                </tr>
-                <tr>
-                    <td>Contraseña: </td>
-                    <td><input type="password" name="txtContraseña" required></td>
-                </tr>
-                <tr>
-                    <td><input type="reset" name=""></td>
-                    <td><input type="submit" value="Ingresar Usuario" name="guardar"></td>
-                </tr>
-        </table>
+        
+        <form action="insertar.php" method="post" class="form">
+            <div class="ingresar-usuario">
+                <div class="input">
+                    <span class="datos">Nombre: </span>
+                    
+                    <input type="text" name="txtNombre" class="input-field" required>
+                </div>
+                <div class="input">
+                    <span class="datos">Apellido Paterno: </span>
+                    
+                    <input type="text" name="txtPaterno" class="input-field" required>
+                </div>
+                <div class="input">
+                    <span class="datos">Apellido Materno: </span>
+                    
+                    <input type="text" name="txtMaterno" class="input-field" required>
+                </div>
+                <div class="input">
+                    <span class="datos">Usuario: </span>
+                   
+                    <input type="text" name="txtUsuario" class="input-field" required>
+                </div>
+                <div class="input">
+                    <span class="datos">Contraseña: </span>
+                    
+                    <input type="text" name="txtContraseña" class="input-field" required>
+                </div>
+                <div>
+                    <input type="reset" name="" class="button">
+                    <input type="submit" value="Ingresar Usuario" name="guardar" class="button">
+                </div>
+            </div>
+        </form>
 </div>
 
 </body>
