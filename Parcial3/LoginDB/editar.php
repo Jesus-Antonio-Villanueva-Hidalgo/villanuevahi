@@ -28,8 +28,13 @@
 
         $consulta="UPDATE usuario SET nombre='$nombre',apellido_paterno='$paterno',apellido_materno='$materno',
         usuario='$usuario',contraseña='$contraseña' WHERE id_usuario=$id";
-        mysqli_query($conexion,$consulta);
-        header ("location: index.php");
+        $resultado=mysqli_query($conexion,$consulta);
+        if($resultado){
+            header ("location: index.php");
+        }
+        else{
+            die('Consulta fallo'.$conexion->error);
+        }
     }
 
 ?>
@@ -44,7 +49,7 @@
     <title>EDITAR</title>
 </head>
 <body>
-<div class="container p-4">
+    <div class="container p-4">
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card card-body">
@@ -81,7 +86,7 @@
                             class="form-control" placeholder="Nueva Contraseña" required>
                         </div>
                         <a href="index.php" >Volver</a>
-                        <button class="btn btn-sucess" name="actualizar" id="btn-update" data-target=".bd-example-modal-lg">Actualizar</button>
+                        <button class="btn btn-sucess" name="actualizar" id="btn-update" data-target=".bd-example-modal-lg" onclick=update()>Actualizar</button>
                         </div>
                         
                     </form>
@@ -90,15 +95,11 @@
         </div>
     </div>
 
-
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-
+    <script type="text/JavaScript">
+        function update() {
+            alert("Registro actualizado correctamente");
+        }
+    </script>
 </body>
 </html>
     

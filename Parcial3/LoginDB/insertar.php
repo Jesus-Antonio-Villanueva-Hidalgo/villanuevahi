@@ -13,9 +13,12 @@
         VALUES ('$nombre','$paterno','$materno','$usuario','$contraseña')";
 
         $resultado=mysqli_query($conexion,$sql);
-        if(!$resultado){
+        if($resultado){
+            header("location: index.php");
+        }
+        else{
             die('Consulta fallo'.$conexion->error);
         }
-        header("location: index.php");
+        
     }
 ?>

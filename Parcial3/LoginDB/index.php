@@ -2,7 +2,14 @@
 <?php 
 
     session_start();
-    $usuario=$_SESSION['Usuario'];
+    if ( !isset($_SESSION['Usuario']) || empty($_SESSION['Usuario']) ) 
+    {
+        header("Location: ./login.php");
+    }else
+    {
+        $usuario=$_SESSION['Usuario'];
+    }
+    
 ?>
 
 <html lang="es">
@@ -31,7 +38,7 @@
             <h1>Bienvenid@: <?php echo $usuario ?></h1><br>
         </div>
         <div class="cab2">
-            <a href="logout.php">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a>
+            <a href="logout.php" onclick="salir()">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a>
         </div>
     </div>
     
@@ -62,7 +69,9 @@
                 <td><?php echo $filas['usuario'] ?></td>
                 <td><?php echo $filas['contraseña'] ?></td>
                 <td><a href="editar.php?id_usuario=<?php echo $filas['id_usuario'] ?>"><i class="far fa-edit"></i></a></td>
-                <td><a href="eliminar.php?id_usuario=<?php echo $filas['id_usuario'] ?>"><i class="fas fa-trash-alt"></i></a></td>
+                
+
+                <td><a href="#" onclick="eliminar(<?php echo $filas['id_usuario'] ?>)"><i class="fas fa-trash-alt"></i></a></td>
             </tr>
             <?php  } ?>
         </tbody>
@@ -105,11 +114,35 @@
                 </div>
                 <div>
                     <input type="reset" name="" class="button">
-                    <input type="submit" value="Ingresar Usuario" name="guardar" class="button">
+                    <input type="submit" value="Ingresar Usuario" name="guardar" class="button" onclick="insert()">
                 </div>
             </div>
         </form>
 </div>
+<script type="text/JavaScript">
+function eliminar(id) {
+  let borrar=confirm("¿Desea eliminar al usuario con ID: "+id+"?");
+  if(borrar==true)
+  {
+      alert("¡Se elimino al usuario correctamente!");
+      window.location.href="eliminar.php?id_usuario="+id;
+  }
+  else{
+    alert("¡No se elimino al usuario!");
+  }
+}
+</script>
+<script type="text/JavaScript">
+function insert() {
+  alert("Usuario ingresado correctamente");
+}
+</script>
 
+<script type="text/JavaScript">
+        function salir() {
+            alert("Se cerró la sesión sin ningun problema");
+            window.location.href="logout.php";
+        }
+    </script>
 </body>
 </html>

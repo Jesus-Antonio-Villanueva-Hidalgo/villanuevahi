@@ -20,6 +20,8 @@
     if($filas>0)
     {
         $_SESSION['Usuario']=$usuario;
+        echo '<script language="javascript">alert("Sesion Iniciada");</script>';
+        echo '<script>alert("Sesion Iniciada")</script>';
         header("location: index.php");
     }else
     {
